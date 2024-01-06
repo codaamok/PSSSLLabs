@@ -56,7 +56,7 @@ function InvokeSslLabsRestMethod {
         Write-Verbose ('URL: {0}'     -f $Params["Uri"])
         Write-Verbose ('Method: {0}'  -f $Params["Method"])
         Write-Verbose ('Body: {0}'    -f $Params["Body"])
-        Write-Verbose ('Headers: {0}' -f $Params["Headers"])
+        Write-Verbose ('Headers: {0}' -f ($Params["Headers"] | ConvertTo-Json))
         Invoke-WebRequest @Params
     }
     catch {
