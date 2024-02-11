@@ -59,6 +59,9 @@ function Start-SslLabsAssessment {
     if ($All -eq $false) {
         $QueryString.Add('all', 'done')
     }
+    else {
+        $QueryString.Add('all', 'on')
+    }
 
     try {
         $Params = @{
